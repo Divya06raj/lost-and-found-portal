@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost & Found Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Lost & Found Portal</h1>
+        
+        <div class="form-section">
+            <h2>Post an Item</h2>
+            <form id="itemForm">
+                <select id="itemType" required>
+                    <option value="">Select Type</option>
+                    <option value="lost">Lost</option>
+                    <option value="found">Found</option>
+                </select>
+                
+                <input type="text" id="itemName" placeholder="Item Name (e.g., Black Wallet)" required>
+                
+                <input type="text" id="location" placeholder="Location (e.g., Canteen)" required>
+                
+                <textarea id="description" placeholder="Description" required></textarea>
+                
+                <input type="text" id="contactName" placeholder="Your Name" required>
+                
+                <input type="email" id="contactEmail" placeholder="Your Email" required>
+                
+                <input type="tel" id="contactPhone" placeholder="Your Phone Number" required>
+                
+                <button type="submit">Post Item</button>
+            </form>
+        </div>
+
+        <div class="filter-section">
+            <h2>Filter Items</h2>
+            <button class="filter-btn active" data-filter="all">All Items</button>
+            <button class="filter-btn" data-filter="lost">Lost Items</button>
+            <button class="filter-btn" data-filter="found">Found Items</button>
+        </div>
+
+        <div class="items-section">
+            <h2>Items List</h2>
+            <div id="itemsList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
