@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.form-section, .filter-section, .items-section {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+#itemForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#itemForm input, #itemForm select, #itemForm textarea {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+#itemForm input:focus, #itemForm select:focus, #itemForm textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+#itemForm textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+#itemForm button {
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#itemForm button:hover {
+    transform: translateY(-2px);
+}
+
+.filter-section {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border: 2px solid #667eea;
+    background: white;
+    color: #667eea;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: #667eea;
+    color: white;
+}
+
+#itemsList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.item-card {
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 5px solid;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.item-card:hover {
+    transform: translateY(-5px);
+}
+
+.item-card.lost {
+    background: #ffe6e6;
+    border-left-color: #ff4444;
+}
+
+.item-card.found {
+    background: #e6ffe6;
+    border-left-color: #44ff44;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.item-badge {
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    color: white;
+}
+
+.item-badge.lost {
+    background: #ff4444;
+}
+
+.item-badge.found {
+    background: #44aa44;
+}
+
+.item-date {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.item-card h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.item-card p {
+    color: #555;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.contact-info {
+    background: rgba(255,255,255,0.5);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.contact-info h4 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.contact-info a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.delete-btn {
+    margin-top: 15px;
+    padding: 8px 15px;
+    background: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.delete-btn:hover {
+    background: #cc0000;
+}
+
+.no-items {
+    text-align: center;
+    color: #999;
+    font-size: 1.2rem;
+    padding: 40px;
+}
+
+@media (max-width: 768px) {
+    #itemsList {
+        grid-template-columns: 1fr;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+}
