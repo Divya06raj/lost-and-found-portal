@@ -92,9 +92,9 @@ The portal is fully responsive and works on:
 ## 👨‍💻 Author
 
 **Your Name**
-- GitHub: [@YOUR_USERNAME](https://github.com/YOUR_USERNAME)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/your-profile)
-- Email: your.email@example.com
+- GitHub: [@YOUR_USERNAME](https://github.com/Divya06raj)
+- LinkedIn: [Your LinkedIn](https://www.linkedin.com/in/divya-mern-dev)
+- Email: divyasingh4629@gmail.com
 
 ## 📄 License
 
